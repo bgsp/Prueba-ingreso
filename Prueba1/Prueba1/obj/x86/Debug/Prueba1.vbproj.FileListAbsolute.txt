@@ -1,0 +1,12 @@
+C:\Users\Martin\Desktop\Prueba-ingreso\Prueba1\Prueba1\bin\Debug\Prueba1.exe
+C:\Users\Martin\Desktop\Prueba-ingreso\Prueba1\Prueba1\bin\Debug\Prueba1.pdb
+C:\Users\Martin\Desktop\Prueba-ingreso\Prueba1\Prueba1\bin\Debug\Prueba1.xml
+C:\Users\Martin\Desktop\Prueba-ingreso\Prueba1\Prueba1\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\Martin\Desktop\Prueba-ingreso\Prueba1\Prueba1\obj\x86\Debug\Prueba1.vbproj.GenerateResource.Cache
+C:\Users\Martin\Desktop\Prueba-ingreso\Prueba1\Prueba1\obj\x86\Debug\Prueba1.exe
+C:\Users\Martin\Desktop\Prueba-ingreso\Prueba1\Prueba1\obj\x86\Debug\Prueba1.xml
+C:\Users\Martin\Desktop\Prueba-ingreso\Prueba1\Prueba1\obj\x86\Debug\Prueba1.pdb
+C:\Users\Martin\Desktop\Prueba-ingreso\Prueba1\Prueba1\obj\x86\Debug\WindowsApplication1.ingreso.resources
+C:\Users\Martin\Desktop\Prueba-ingreso\Prueba1\Prueba1\obj\x86\Debug\WindowsApplication1.registrouser.resources
+C:\Users\Martin\Desktop\Prueba-ingreso\Prueba1\Prueba1\obj\x86\Debug\WindowsApplication1.principal.resources
+C:\Users\Martin\Desktop\Prueba-ingreso\Prueba1\Prueba1\obj\x86\Debug\WindowsApplication1.agregarempleado.resources
