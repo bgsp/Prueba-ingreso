@@ -67,4 +67,7 @@
 
 
 
+    Private Sub AgregarToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AgregarToolStripMenuItem1.Click
+        registroprov.Show()
+    End Sub
 End Class

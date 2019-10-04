@@ -201,19 +201,19 @@ Partial Class principal
         'AgregarToolStripMenuItem1
         '
         Me.AgregarToolStripMenuItem1.Name = "AgregarToolStripMenuItem1"
-        Me.AgregarToolStripMenuItem1.Size = New System.Drawing.Size(117, 22)
+        Me.AgregarToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.AgregarToolStripMenuItem1.Text = "Agregar"
         '
         'EditarToolStripMenuItem1
         '
         Me.EditarToolStripMenuItem1.Name = "EditarToolStripMenuItem1"
-        Me.EditarToolStripMenuItem1.Size = New System.Drawing.Size(117, 22)
+        Me.EditarToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.EditarToolStripMenuItem1.Text = "Editar"
         '
         'EliminarToolStripMenuItem1
         '
         Me.EliminarToolStripMenuItem1.Name = "EliminarToolStripMenuItem1"
-        Me.EliminarToolStripMenuItem1.Size = New System.Drawing.Size(117, 22)
+        Me.EliminarToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.EliminarToolStripMenuItem1.Text = "Eliminar"
         '
         'RegistrosToolStripMenuItem

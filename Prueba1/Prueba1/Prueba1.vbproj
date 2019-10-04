@@ -78,6 +78,12 @@
     <Compile Include="agregarempleado.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="registroprov.Designer.vb">
+      <DependentUpon>registroprov.vb</DependentUpon>
+    </Compile>
+    <Compile Include="registroprov.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ingreso.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
   <ItemGroup>
     <EmbeddedResource Include="agregarempleado.resx">
       <DependentUpon>agregarempleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registroprov.resx">
+      <DependentUpon>registroprov.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ingreso.resx">
       <DependentUpon>ingreso.vb</DependentUpon>
