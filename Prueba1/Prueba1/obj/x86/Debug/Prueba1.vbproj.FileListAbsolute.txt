@@ -24,3 +24,6 @@ C:\Users\Equipo\Desktop\Prueba-ingreso\Prueba-ingreso\Prueba1\Prueba1\obj\x86\De
 C:\Users\Equipo\Desktop\Prueba-ingreso\Prueba-ingreso\Prueba1\Prueba1\obj\x86\Debug\Prueba1.vbproj.GenerateResource.Cache
 C:\Users\Equipo\Desktop\Prueba-ingreso\Prueba-ingreso\Prueba1\Prueba1\obj\x86\Debug\WindowsApplication1.registroprov.resources
 C:\Users\Equipo\Desktop\Prueba-ingreso\Prueba-ingreso\Prueba1\Prueba1\obj\x86\Debug\WindowsApplication1.registroprod.resources
+C:\UsersPrueba-ingreso\Prueba1\Prueba1\obj\x86\Debug\Prueba1.exe
+C:\UsersPrueba-ingreso\Prueba1\Prueba1\obj\x86\Debug\Prueba1.xml
+C:\UsersPrueba-ingreso\Prueba1\Prueba1\obj\x86\Debug\Prueba1.pdb
