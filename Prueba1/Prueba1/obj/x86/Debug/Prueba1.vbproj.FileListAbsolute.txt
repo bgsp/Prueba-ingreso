@@ -27,3 +27,6 @@ C:\Users\Equipo\Desktop\Prueba-ingreso\Prueba-ingreso\Prueba1\Prueba1\obj\x86\De
 C:\UsersPrueba-ingreso\Prueba1\Prueba1\obj\x86\Debug\Prueba1.exe
 C:\UsersPrueba-ingreso\Prueba1\Prueba1\obj\x86\Debug\Prueba1.xml
 C:\UsersPrueba-ingreso\Prueba1\Prueba1\obj\x86\Debug\Prueba1.pdb
+C:\Users\Martin\Desktop\Prueba-ingreso\Prueba1\Prueba1\obj\x86\Debug\Prueba1.vbprojResolveAssemblyReference.cache
+C:\Users\Martin\Desktop\Prueba-ingreso\Prueba1\Prueba1\obj\x86\Debug\WindowsApplication1.registroprod.resources
+C:\Users\Martin\Desktop\Prueba-ingreso\Prueba1\Prueba1\obj\x86\Debug\WindowsApplication1.registroprov.resources

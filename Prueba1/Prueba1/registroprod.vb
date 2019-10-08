@@ -1,20 +1,35 @@
-﻿Public Class registroprod
+﻿Imports MySql.Data.MySqlClient
+Public Class registroprod
+    Dim conex As New MySqlConnection("data source=localhost;user id=root; password= '';database=panaderia")
+    Dim da As MySqlDataAdapter
+    Dim dt As DataTable
+    Dim sql As String
+    Dim comando As MySqlCommand
+    Private Sub introducirproductos()
+        Try
+            comando = New MySqlCommand("insert into productos (nombre,precio,stock)" & Chr(13) &
+                              "values (@nombre,@precio,@stock)", conex)
+            comando.Parameters.AddWithValue("@nombre", txtNomprod.Text)
+            comando.Parameters.AddWithValue("@precio", txtProdPrice.Text)
+            comando.Parameters.AddWithValue("@stock", txtProdU.Text)
+            comando.ExecuteNonQuery()
+            MsgBox("Producto cargado correctamente", MsgBoxStyle.Information, vbOKOnly)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+    End Sub
 
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
 
-        If txtCodprod.Text = "" Or txtNomprod.Text = "" Or txtProdPrice.Text = "" Or txtProdU.Text = "" Then
-            MsgBox("Debe ingresar todos los datos del proveedor.")
+        If txtNomprod.Text = "" Or txtProdPrice.Text = "" Or txtProdU.Text = "" Then
+            MsgBox("Debe ingresar todos los datos del proveedor.", MsgBoxStyle.Exclamation)
         ElseIf txtProdU.Text > 999 Then
             MsgBox("Las existencias no pueden superar las 999 unidades")
-        Else
-            Dim cantfilas As Integer
-            cantfilas = dgvProductos.Rows.Count - 1
-            dgvProductos.Rows.Add()
-            dgvProductos(0, cantfilas).Value = txtCodprod.Text
-            dgvProductos(1, cantfilas).Value = txtNomprod.Text
-            dgvProductos(2, cantfilas).Value = txtProdPrice.Text
-            dgvProductos(3, cantfilas).Value = txtProdU.Text
+
+
         End If
+        Call introducirproductos()
 
     End Sub
 
@@ -48,5 +63,23 @@
         Else
             e.Handled = True
         End If
+    End Sub
+
+    Private Sub registroprod_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        conex.Open()
+
+    End Sub
+
+    Private Sub dgvProductos_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvRegProductos.CellContentClick
+
+    End Sub
+
+    
+    Private Sub btnactualizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnactualizar.Click
+
+    End Sub
+
+    Private Sub btnSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalir.Click
+        Me.Close()
     End Sub
 End Class

@@ -48,30 +48,50 @@ Partial Class principal
         Me.VerRegistrosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ComprasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.gbproductos = New System.Windows.Forms.GroupBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.gbListaprod = New System.Windows.Forms.GroupBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         CType(Me.catalogoPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.empleadosPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.registroPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.salirPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.proveedorPB, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
+        Me.gbproductos.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gbListaprod.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'catalogoPB
         '
         Me.catalogoPB.Image = CType(resources.GetObject("catalogoPB.Image"), System.Drawing.Image)
-        Me.catalogoPB.Location = New System.Drawing.Point(22, 51)
+        Me.catalogoPB.Location = New System.Drawing.Point(30, 38)
         Me.catalogoPB.Name = "catalogoPB"
-        Me.catalogoPB.Size = New System.Drawing.Size(138, 69)
-        Me.catalogoPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.catalogoPB.Size = New System.Drawing.Size(110, 90)
+        Me.catalogoPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.catalogoPB.TabIndex = 0
         Me.catalogoPB.TabStop = False
         '
         'empleadosPB
         '
         Me.empleadosPB.Image = CType(resources.GetObject("empleadosPB.Image"), System.Drawing.Image)
-        Me.empleadosPB.Location = New System.Drawing.Point(27, 249)
+        Me.empleadosPB.Location = New System.Drawing.Point(30, 263)
         Me.empleadosPB.Name = "empleadosPB"
-        Me.empleadosPB.Size = New System.Drawing.Size(113, 88)
+        Me.empleadosPB.Size = New System.Drawing.Size(110, 83)
         Me.empleadosPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.empleadosPB.TabIndex = 1
         Me.empleadosPB.TabStop = False
@@ -79,9 +99,9 @@ Partial Class principal
         'registroPB
         '
         Me.registroPB.Image = CType(resources.GetObject("registroPB.Image"), System.Drawing.Image)
-        Me.registroPB.Location = New System.Drawing.Point(30, 355)
+        Me.registroPB.Location = New System.Drawing.Point(30, 368)
         Me.registroPB.Name = "registroPB"
-        Me.registroPB.Size = New System.Drawing.Size(100, 83)
+        Me.registroPB.Size = New System.Drawing.Size(110, 88)
         Me.registroPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.registroPB.TabIndex = 3
         Me.registroPB.TabStop = False
@@ -89,9 +109,9 @@ Partial Class principal
         'salirPB
         '
         Me.salirPB.Image = CType(resources.GetObject("salirPB.Image"), System.Drawing.Image)
-        Me.salirPB.Location = New System.Drawing.Point(26, 477)
+        Me.salirPB.Location = New System.Drawing.Point(26, 499)
         Me.salirPB.Name = "salirPB"
-        Me.salirPB.Size = New System.Drawing.Size(115, 38)
+        Me.salirPB.Size = New System.Drawing.Size(129, 38)
         Me.salirPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.salirPB.TabIndex = 4
         Me.salirPB.TabStop = False
@@ -99,9 +119,9 @@ Partial Class principal
         'proveedorPB
         '
         Me.proveedorPB.Image = CType(resources.GetObject("proveedorPB.Image"), System.Drawing.Image)
-        Me.proveedorPB.Location = New System.Drawing.Point(26, 140)
+        Me.proveedorPB.Location = New System.Drawing.Point(29, 147)
         Me.proveedorPB.Name = "proveedorPB"
-        Me.proveedorPB.Size = New System.Drawing.Size(113, 92)
+        Me.proveedorPB.Size = New System.Drawing.Size(111, 101)
         Me.proveedorPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.proveedorPB.TabIndex = 2
         Me.proveedorPB.TabStop = False
@@ -110,7 +130,7 @@ Partial Class principal
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(34, 222)
+        Me.Label1.Location = New System.Drawing.Point(40, 237)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(100, 13)
         Me.Label1.TabIndex = 5
@@ -120,7 +140,7 @@ Partial Class principal
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(44, 317)
+        Me.Label2.Location = New System.Drawing.Point(47, 346)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(82, 13)
         Me.Label2.TabIndex = 6
@@ -131,7 +151,7 @@ Partial Class principal
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem, Me.CatalogoToolStripMenuItem, Me.EmpleadosToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.RegistrosToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1008, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1025, 24)
         Me.MenuStrip1.TabIndex = 7
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -176,19 +196,19 @@ Partial Class principal
         'AgregarToolStripMenuItem
         '
         Me.AgregarToolStripMenuItem.Name = "AgregarToolStripMenuItem"
-        Me.AgregarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AgregarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.AgregarToolStripMenuItem.Text = "Agregar"
         '
         'EditarToolStripMenuItem
         '
         Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.EditarToolStripMenuItem.Text = "Editar"
         '
         'EliminarToolStripMenuItem
         '
         Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'ProveedoresToolStripMenuItem
@@ -239,18 +259,173 @@ Partial Class principal
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(47, 442)
+        Me.Label3.Location = New System.Drawing.Point(52, 459)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(71, 13)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "REGISTRO"
+        '
+        'Panel1
+        '
+        Me.Panel1.Location = New System.Drawing.Point(6, 56)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(619, 34)
+        Me.Panel1.TabIndex = 9
+        '
+        'gbproductos
+        '
+        Me.gbproductos.Controls.Add(Me.Button2)
+        Me.gbproductos.Controls.Add(Me.Button1)
+        Me.gbproductos.Controls.Add(Me.TextBox2)
+        Me.gbproductos.Controls.Add(Me.Label6)
+        Me.gbproductos.Controls.Add(Me.Label5)
+        Me.gbproductos.Controls.Add(Me.TextBox1)
+        Me.gbproductos.Controls.Add(Me.Label4)
+        Me.gbproductos.Controls.Add(Me.DataGridView1)
+        Me.gbproductos.Controls.Add(Me.Panel1)
+        Me.gbproductos.Location = New System.Drawing.Point(146, 38)
+        Me.gbproductos.Name = "gbproductos"
+        Me.gbproductos.Size = New System.Drawing.Size(631, 447)
+        Me.gbproductos.TabIndex = 10
+        Me.gbproductos.TabStop = False
+        Me.gbproductos.Text = "Productos"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(6, 84)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(619, 328)
+        Me.DataGridView1.TabIndex = 10
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(6, 416)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 11
+        Me.Button1.Text = "Actualizar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(21, 31)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(132, 16)
+        Me.Label4.TabIndex = 11
+        Me.Label4.Text = "Buscar producto por:"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(159, 30)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(130, 20)
+        Me.TextBox1.TabIndex = 12
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(203, 16)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(44, 13)
+        Me.Label5.TabIndex = 13
+        Me.Label5.Text = "Nombre"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(342, 16)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(63, 13)
+        Me.Label6.TabIndex = 14
+        Me.Label6.Text = "ID producto"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(310, 30)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(130, 20)
+        Me.TextBox2.TabIndex = 15
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(276, 418)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(108, 23)
+        Me.Button2.TabIndex = 16
+        Me.Button2.Text = "Agregar a lista"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'gbListaprod
+        '
+        Me.gbListaprod.Controls.Add(Me.TextBox3)
+        Me.gbListaprod.Controls.Add(Me.Label7)
+        Me.gbListaprod.Controls.Add(Me.DataGridView2)
+        Me.gbListaprod.Controls.Add(Me.Button4)
+        Me.gbListaprod.Controls.Add(Me.Button3)
+        Me.gbListaprod.Location = New System.Drawing.Point(783, 38)
+        Me.gbListaprod.Name = "gbListaprod"
+        Me.gbListaprod.Size = New System.Drawing.Size(230, 447)
+        Me.gbListaprod.TabIndex = 11
+        Me.gbListaprod.TabStop = False
+        Me.gbListaprod.Text = "Lista de compra"
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(20, 416)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(90, 23)
+        Me.Button3.TabIndex = 0
+        Me.Button3.Text = "Eliminar de lista"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(116, 416)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(92, 23)
+        Me.Button4.TabIndex = 1
+        Me.Button4.Text = "Finalizar compra"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(6, 19)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(218, 335)
+        Me.DataGridView2.TabIndex = 2
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(35, 375)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(51, 13)
+        Me.Label7.TabIndex = 3
+        Me.Label7.Text = "TOTAL:"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(101, 372)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(84, 20)
+        Me.TextBox3.TabIndex = 4
         '
         'principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1008, 562)
+        Me.ClientSize = New System.Drawing.Size(1025, 562)
+        Me.Controls.Add(Me.gbListaprod)
+        Me.Controls.Add(Me.gbproductos)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -271,6 +446,12 @@ Partial Class principal
         CType(Me.proveedorPB, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.gbproductos.ResumeLayout(False)
+        Me.gbproductos.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gbListaprod.ResumeLayout(False)
+        Me.gbListaprod.PerformLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -300,4 +481,20 @@ Partial Class principal
     Friend WithEvents EliminarToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ComprasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents gbproductos As System.Windows.Forms.GroupBox
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents gbListaprod As System.Windows.Forms.GroupBox
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
+    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Button3 As System.Windows.Forms.Button
 End Class

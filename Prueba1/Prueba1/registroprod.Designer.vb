@@ -34,12 +34,9 @@ Partial Class registroprod
         Me.txtNomprod = New System.Windows.Forms.TextBox()
         Me.txtCodprod = New System.Windows.Forms.TextBox()
         Me.btnAgregar = New System.Windows.Forms.Button()
-        Me.dgvProductos = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.dgvRegProductos = New System.Windows.Forms.DataGridView()
+        Me.btnactualizar = New System.Windows.Forms.Button()
+        CType(Me.dgvRegProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label5
@@ -147,42 +144,32 @@ Partial Class registroprod
         '
         Me.btnAgregar.BackColor = System.Drawing.Color.DarkOrange
         Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregar.Location = New System.Drawing.Point(181, 407)
+        Me.btnAgregar.Location = New System.Drawing.Point(125, 409)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(100, 34)
         Me.btnAgregar.TabIndex = 27
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = False
         '
-        'dgvProductos
+        'dgvRegProductos
         '
-        Me.dgvProductos.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4})
-        Me.dgvProductos.Location = New System.Drawing.Point(12, 42)
-        Me.dgvProductos.Name = "dgvProductos"
-        Me.dgvProductos.Size = New System.Drawing.Size(443, 292)
-        Me.dgvProductos.TabIndex = 26
+        Me.dgvRegProductos.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.dgvRegProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvRegProductos.Location = New System.Drawing.Point(12, 42)
+        Me.dgvRegProductos.Name = "dgvRegProductos"
+        Me.dgvRegProductos.Size = New System.Drawing.Size(443, 292)
+        Me.dgvRegProductos.TabIndex = 26
         '
-        'Column1
+        'btnactualizar
         '
-        Me.Column1.HeaderText = "Cod Product"
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Nombre"
-        Me.Column2.Name = "Column2"
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Precio U"
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Unidades"
-        Me.Column4.Name = "Column4"
+        Me.btnactualizar.BackColor = System.Drawing.Color.DarkOrange
+        Me.btnactualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnactualizar.Location = New System.Drawing.Point(231, 409)
+        Me.btnactualizar.Name = "btnactualizar"
+        Me.btnactualizar.Size = New System.Drawing.Size(100, 34)
+        Me.btnactualizar.TabIndex = 39
+        Me.btnactualizar.Text = "actualizar"
+        Me.btnactualizar.UseVisualStyleBackColor = False
         '
         'registroprod
         '
@@ -190,6 +177,7 @@ Partial Class registroprod
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(469, 453)
+        Me.Controls.Add(Me.btnactualizar)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -202,10 +190,10 @@ Partial Class registroprod
         Me.Controls.Add(Me.txtNomprod)
         Me.Controls.Add(Me.txtCodprod)
         Me.Controls.Add(Me.btnAgregar)
-        Me.Controls.Add(Me.dgvProductos)
+        Me.Controls.Add(Me.dgvRegProductos)
         Me.Name = "registroprod"
         Me.Text = "Registro de productos."
-        CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvRegProductos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -222,9 +210,6 @@ Partial Class registroprod
     Friend WithEvents txtNomprod As System.Windows.Forms.TextBox
     Friend WithEvents txtCodprod As System.Windows.Forms.TextBox
     Friend WithEvents btnAgregar As System.Windows.Forms.Button
-    Friend WithEvents dgvProductos As System.Windows.Forms.DataGridView
-    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents dgvRegProductos As System.Windows.Forms.DataGridView
+    Friend WithEvents btnactualizar As System.Windows.Forms.Button
 End Class
