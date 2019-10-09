@@ -6,35 +6,26 @@ Public Class principal
     Dim dt As DataTable
     Dim sql As String
     Dim comando As MySqlCommand
-    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles catalogoPB.Click
+    Private Sub catalogoPB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles catalogoPB.Click
         gbproductos.Visible = True
         gbListaprod.Visible = True
+        gbProv.Visible = False
 
     End Sub
-    Private Sub PictureBox1_hover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles catalogoPB.MouseHover
+    Private Sub catalogoPB_hover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles catalogoPB.MouseHover
         catalogoPB.Size = New Size(120, 100)
     End Sub
-    Private Sub picturebox1_leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles catalogoPB.MouseLeave
+    Private Sub catalogoPB_leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles catalogoPB.MouseLeave
         catalogoPB.Size = New Size(110, 90)
     End Sub
 
-    Private Sub PictureBox2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles empleadosPB.Click
-
-    End Sub
-
-    Private Sub PictureBox2_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles empleadosPB.MouseHover, Label2.MouseHover
+    Private Sub empleadosPB_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles empleadosPB.MouseHover, Label2.MouseHover
         empleadosPB.Size = New Size(120, 93)
 
     End Sub
 
-    Private Sub PictureBox2_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles empleadosPB.MouseLeave, Label2.MouseLeave
+    Private Sub empleadosPB_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles empleadosPB.MouseLeave, Label2.MouseLeave
         empleadosPB.Size = New Size(110, 83)
-
-    End Sub
-
-   
-
-    Private Sub PictureBox4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles registroPB.Click
 
     End Sub
 
@@ -84,24 +75,27 @@ Public Class principal
     Private Sub principal_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         gbproductos.Visible = False
         gbListaprod.Visible = False
+        gbProv.Visible = False
     End Sub
-
-    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
-    End Sub
-    Private Sub mostrarlosproductos(ByVal dgv As DataGridView)
+    Private Sub mostrarprovedores(ByVal dgvProv As DataGridView)
         Try
-            sql = "select * from productos"
-            'da = New MySqlDataAdapter(sql, conex)
-            'dt = New DataTable
-            'da.Fill(dt)
-            'dv.Table = dataset.Tables(0)
-            'dtglistaproducto.DataSource = dt
+            sql = "select * from proveedores"
             da = New MySqlDataAdapter(sql, conex)
             dt = New DataTable
             da.Fill(dt)
-            dgv.DataSource = dt
+            dgvProv.DataSource = dt
 
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+    Private Sub mostrarlosproductos(ByVal dgvProd As DataGridView)
+        Try
+            sql = "select * from productos"
+            da = New MySqlDataAdapter(sql, conex)
+            dt = New DataTable
+            da.Fill(dt)
+            dgvProd.DataSource = dt
 
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -112,7 +106,22 @@ Public Class principal
 
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Call mostrarlosproductos(DataGridView1)
+    Private Sub actualizar_dgvProd(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Call mostrarlosproductos(dgvProd)
+    End Sub
+
+    Private Sub proveedorPB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles proveedorPB.Click
+        gbproductos.Visible = False
+        gbListaprod.Visible = False
+        gbProv.Visible = True
+
+    End Sub
+
+    Private Sub actualizar_dgProv(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
+        Call mostrarprovedores(dgvProv)
+    End Sub
+
+    Private Sub EliminarProductoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EliminarProductoToolStripMenuItem.Click
+
     End Sub
 End Class

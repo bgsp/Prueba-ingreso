@@ -50,20 +50,30 @@ Partial Class principal
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.gbproductos = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.dgvProd = New System.Windows.Forms.DataGridView()
+        Me.gbProv = New System.Windows.Forms.GroupBox()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.dgvProv = New System.Windows.Forms.DataGridView()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.gbListaprod = New System.Windows.Forms.GroupBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.catalogoPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.empleadosPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.registroPB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,7 +81,9 @@ Partial Class principal
         CType(Me.proveedorPB, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.gbproductos.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvProd, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gbProv.SuspendLayout()
+        CType(Me.dgvProv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbListaprod.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -109,9 +121,9 @@ Partial Class principal
         'salirPB
         '
         Me.salirPB.Image = CType(resources.GetObject("salirPB.Image"), System.Drawing.Image)
-        Me.salirPB.Location = New System.Drawing.Point(26, 499)
+        Me.salirPB.Location = New System.Drawing.Point(32, 499)
         Me.salirPB.Name = "salirPB"
-        Me.salirPB.Size = New System.Drawing.Size(129, 38)
+        Me.salirPB.Size = New System.Drawing.Size(97, 38)
         Me.salirPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.salirPB.TabIndex = 4
         Me.salirPB.TabStop = False
@@ -165,8 +177,8 @@ Partial Class principal
         '
         Me.CatalogoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarProductoToolStripMenuItem, Me.EliminarProductoToolStripMenuItem, Me.EditarProductoToolStripMenuItem})
         Me.CatalogoToolStripMenuItem.Name = "CatalogoToolStripMenuItem"
-        Me.CatalogoToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
-        Me.CatalogoToolStripMenuItem.Text = "Catalogo"
+        Me.CatalogoToolStripMenuItem.Size = New System.Drawing.Size(73, 20)
+        Me.CatalogoToolStripMenuItem.Text = "Productos"
         '
         'AgregarProductoToolStripMenuItem
         '
@@ -281,34 +293,64 @@ Partial Class principal
         Me.gbproductos.Controls.Add(Me.Label5)
         Me.gbproductos.Controls.Add(Me.TextBox1)
         Me.gbproductos.Controls.Add(Me.Label4)
-        Me.gbproductos.Controls.Add(Me.DataGridView1)
+        Me.gbproductos.Controls.Add(Me.dgvProd)
         Me.gbproductos.Controls.Add(Me.Panel1)
-        Me.gbproductos.Location = New System.Drawing.Point(146, 38)
+        Me.gbproductos.Location = New System.Drawing.Point(146, 30)
         Me.gbproductos.Name = "gbproductos"
-        Me.gbproductos.Size = New System.Drawing.Size(631, 447)
+        Me.gbproductos.Size = New System.Drawing.Size(631, 507)
         Me.gbproductos.TabIndex = 10
         Me.gbproductos.TabStop = False
         Me.gbproductos.Text = "Productos"
         '
-        'DataGridView1
+        'Button2
         '
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 84)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(619, 328)
-        Me.DataGridView1.TabIndex = 10
+        Me.Button2.Location = New System.Drawing.Point(263, 469)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(108, 23)
+        Me.Button2.TabIndex = 16
+        Me.Button2.Text = "Agregar a lista"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(6, 416)
+        Me.Button1.Location = New System.Drawing.Point(6, 469)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 11
         Me.Button1.Text = "Actualizar"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(310, 30)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(130, 20)
+        Me.TextBox2.TabIndex = 15
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(342, 16)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(63, 13)
+        Me.Label6.TabIndex = 14
+        Me.Label6.Text = "ID producto"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(203, 16)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(44, 13)
+        Me.Label5.TabIndex = 13
+        Me.Label5.Text = "Nombre"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(159, 30)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(130, 20)
+        Me.TextBox1.TabIndex = 12
         '
         'Label4
         '
@@ -320,46 +362,113 @@ Partial Class principal
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "Buscar producto por:"
         '
-        'TextBox1
+        'dgvProd
         '
-        Me.TextBox1.Location = New System.Drawing.Point(159, 30)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(130, 20)
-        Me.TextBox1.TabIndex = 12
+        Me.dgvProd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvProd.Location = New System.Drawing.Point(6, 84)
+        Me.dgvProd.Name = "dgvProd"
+        Me.dgvProd.ReadOnly = True
+        Me.dgvProd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvProd.Size = New System.Drawing.Size(619, 379)
+        Me.dgvProd.TabIndex = 10
         '
-        'Label5
+        'gbProv
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(203, 16)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(44, 13)
-        Me.Label5.TabIndex = 13
-        Me.Label5.Text = "Nombre"
+        Me.gbProv.Controls.Add(Me.Button5)
+        Me.gbProv.Controls.Add(Me.Button6)
+        Me.gbProv.Controls.Add(Me.TextBox4)
+        Me.gbProv.Controls.Add(Me.Label8)
+        Me.gbProv.Controls.Add(Me.Label9)
+        Me.gbProv.Controls.Add(Me.TextBox5)
+        Me.gbProv.Controls.Add(Me.Label10)
+        Me.gbProv.Controls.Add(Me.dgvProv)
+        Me.gbProv.Controls.Add(Me.Panel2)
+        Me.gbProv.Location = New System.Drawing.Point(140, 30)
+        Me.gbProv.Name = "gbProv"
+        Me.gbProv.Size = New System.Drawing.Size(867, 507)
+        Me.gbProv.TabIndex = 17
+        Me.gbProv.TabStop = False
+        Me.gbProv.Text = "Proveedores"
+        Me.gbProv.Visible = False
         '
-        'Label6
+        'Button5
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(342, 16)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(63, 13)
-        Me.Label6.TabIndex = 14
-        Me.Label6.Text = "ID producto"
+        Me.Button5.Location = New System.Drawing.Point(263, 469)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(108, 23)
+        Me.Button5.TabIndex = 16
+        Me.Button5.Text = "Agregar a lista"
+        Me.Button5.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'Button6
         '
-        Me.TextBox2.Location = New System.Drawing.Point(310, 30)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(130, 20)
-        Me.TextBox2.TabIndex = 15
+        Me.Button6.Location = New System.Drawing.Point(24, 469)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.TabIndex = 11
+        Me.Button6.Text = "Actualizar"
+        Me.Button6.UseVisualStyleBackColor = True
         '
-        'Button2
+        'TextBox4
         '
-        Me.Button2.Location = New System.Drawing.Point(276, 418)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(108, 23)
-        Me.Button2.TabIndex = 16
-        Me.Button2.Text = "Agregar a lista"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.TextBox4.Location = New System.Drawing.Point(310, 30)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(130, 20)
+        Me.TextBox4.TabIndex = 15
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(354, 16)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(30, 13)
+        Me.Label8.TabIndex = 14
+        Me.Label8.Text = "RUT"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(203, 16)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(44, 13)
+        Me.Label9.TabIndex = 13
+        Me.Label9.Text = "Nombre"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(159, 30)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(130, 20)
+        Me.TextBox5.TabIndex = 12
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(21, 31)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(142, 16)
+        Me.Label10.TabIndex = 11
+        Me.Label10.Text = "Buscar proveedor por:"
+        '
+        'dgvProv
+        '
+        Me.dgvProv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvProv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvProv.Location = New System.Drawing.Point(17, 84)
+        Me.dgvProv.Name = "dgvProv"
+        Me.dgvProv.ReadOnly = True
+        Me.dgvProv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvProv.Size = New System.Drawing.Size(619, 328)
+        Me.dgvProv.TabIndex = 10
+        '
+        'Panel2
+        '
+        Me.Panel2.Location = New System.Drawing.Point(17, 56)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(619, 34)
+        Me.Panel2.TabIndex = 9
         '
         'gbListaprod
         '
@@ -368,55 +477,55 @@ Partial Class principal
         Me.gbListaprod.Controls.Add(Me.DataGridView2)
         Me.gbListaprod.Controls.Add(Me.Button4)
         Me.gbListaprod.Controls.Add(Me.Button3)
-        Me.gbListaprod.Location = New System.Drawing.Point(783, 38)
+        Me.gbListaprod.Location = New System.Drawing.Point(783, 30)
         Me.gbListaprod.Name = "gbListaprod"
-        Me.gbListaprod.Size = New System.Drawing.Size(230, 447)
+        Me.gbListaprod.Size = New System.Drawing.Size(230, 507)
         Me.gbListaprod.TabIndex = 11
         Me.gbListaprod.TabStop = False
         Me.gbListaprod.Text = "Lista de compra"
         '
-        'Button3
+        'TextBox3
         '
-        Me.Button3.Location = New System.Drawing.Point(20, 416)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(90, 23)
-        Me.Button3.TabIndex = 0
-        Me.Button3.Text = "Eliminar de lista"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.TextBox3.Location = New System.Drawing.Point(86, 430)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(138, 20)
+        Me.TextBox3.TabIndex = 4
         '
-        'Button4
+        'Label7
         '
-        Me.Button4.Location = New System.Drawing.Point(116, 416)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(92, 23)
-        Me.Button4.TabIndex = 1
-        Me.Button4.Text = "Finalizar compra"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(20, 433)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(61, 16)
+        Me.Label7.TabIndex = 3
+        Me.Label7.Text = "TOTAL:"
         '
         'DataGridView2
         '
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Location = New System.Drawing.Point(6, 19)
         Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(218, 335)
+        Me.DataGridView2.Size = New System.Drawing.Size(218, 399)
         Me.DataGridView2.TabIndex = 2
         '
-        'Label7
+        'Button4
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(35, 375)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(51, 13)
-        Me.Label7.TabIndex = 3
-        Me.Label7.Text = "TOTAL:"
+        Me.Button4.Location = New System.Drawing.Point(119, 461)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(92, 23)
+        Me.Button4.TabIndex = 1
+        Me.Button4.Text = "Finalizar compra"
+        Me.Button4.UseVisualStyleBackColor = True
         '
-        'TextBox3
+        'Button3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(101, 372)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(84, 20)
-        Me.TextBox3.TabIndex = 4
+        Me.Button3.Location = New System.Drawing.Point(23, 461)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(90, 23)
+        Me.Button3.TabIndex = 0
+        Me.Button3.Text = "Eliminar de lista"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'principal
         '
@@ -424,6 +533,7 @@ Partial Class principal
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1025, 562)
+        Me.Controls.Add(Me.gbProv)
         Me.Controls.Add(Me.gbListaprod)
         Me.Controls.Add(Me.gbproductos)
         Me.Controls.Add(Me.Label3)
@@ -448,7 +558,10 @@ Partial Class principal
         Me.MenuStrip1.PerformLayout()
         Me.gbproductos.ResumeLayout(False)
         Me.gbproductos.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvProd, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gbProv.ResumeLayout(False)
+        Me.gbProv.PerformLayout()
+        CType(Me.dgvProv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbListaprod.ResumeLayout(False)
         Me.gbListaprod.PerformLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -483,7 +596,7 @@ Partial Class principal
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents gbproductos As System.Windows.Forms.GroupBox
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvProd As System.Windows.Forms.DataGridView
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
@@ -497,4 +610,14 @@ Partial Class principal
     Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents gbProv As System.Windows.Forms.GroupBox
+    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents dgvProv As System.Windows.Forms.DataGridView
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
 End Class

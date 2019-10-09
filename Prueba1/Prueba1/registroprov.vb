@@ -1,15 +1,25 @@
-﻿Public Class registroprov
-
+﻿Imports MySql.Data.MySqlClient
+Public Class registroprov
+    Dim conex As New MySqlConnection("data source=localhost;user id=root; password= '';database=panaderia")
+    Dim da As MySqlDataAdapter
+    Dim dt As DataTable
+    Dim sql As String
+    Dim comando As MySqlCommand
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
     End Sub
-
-    Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click
-
-    End Sub
-
-    Private Sub dgvAlumnos_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvProveedores.CellContentClick
-
+    Private Sub introducirproveedores()
+        Try
+            comando = New MySqlCommand("insert into proveedores (rut,direccion,nombre,telefono)" & Chr(13) &
+                                       "values (@rut,@direccion,@nombre,@telefono)", conex)
+            comando.Parameters.AddWithValue("@rut", txtRUT.Text)
+            comando.Parameters.AddWithValue("@direccion", txtDireccion.Text)
+            comando.Parameters.AddWithValue("@nombre", txtNombre.Text)
+            comando.Parameters.AddWithValue("@telefono", txtTelefono.Text)
+            MsgBox("Proveedor cargado correctamente", MsgBoxStyle.Information)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
@@ -25,7 +35,7 @@
             dgvProveedores(2, cantfilas).Value = txtNombre.Text
             dgvProveedores(3, cantfilas).Value = txtTelefono.Text
         End If
-
+        Call introducirproveedores()
     End Sub
 
 

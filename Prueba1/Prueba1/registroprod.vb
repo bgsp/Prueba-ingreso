@@ -6,6 +6,7 @@ Public Class registroprod
     Dim sql As String
     Dim comando As MySqlCommand
     Private Sub introducirproductos()
+
         Try
             comando = New MySqlCommand("insert into productos (nombre,precio,stock)" & Chr(13) &
                               "values (@nombre,@precio,@stock)", conex)
@@ -13,12 +14,15 @@ Public Class registroprod
             comando.Parameters.AddWithValue("@precio", txtProdPrice.Text)
             comando.Parameters.AddWithValue("@stock", txtProdU.Text)
             comando.ExecuteNonQuery()
+
             MsgBox("Producto cargado correctamente", MsgBoxStyle.Information, vbOKOnly)
+
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
 
     End Sub
+   
 
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
 
